@@ -111,7 +111,7 @@ const products = [
         name: 'Doğal Acı Biber Reçeli (330cc.)',
         oldPrice: '250.00',
         price: '210',
-        image: 'images/acıbiberreceli2.png',
+        image: 'images/acıbiberreceli3.png',
         detailedDescription: "Erik reçelimiz, olgunluğun zirvesindeki eriklerle hazırlanır. Tatlı ve ekşi arasındaki mükemmel dengesiyle kahvaltılarınıza lezzet katacak bu reçel, geleneksel yöntemlerle hazırlanır ve doğal kıvam artırıcılar kullanılır. Ekmek üzerinde veya yoğurtla birlikte tüketebilirsiniz.",
         kullanımÖnerileri: "Bu reçel, doğal ve sağlıklı bir şekilde tüketilebilir. Önerilen kullanım süresi: 1-2 saat.",
          saklamaKoşulları: "Köy ve sıcak bölgelerde saklanması önerilir. " +
