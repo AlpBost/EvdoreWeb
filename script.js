@@ -247,3 +247,64 @@ function showProductDetails(productId) {
     
     modal.style.display = 'block';
 }
+
+// Modalı kapat
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+// Olay dinleyicileri
+closeButton.addEventListener('click', closeModal);
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+// İletişim butonuna tıklandığında modalı kapat
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('contact-button')) {
+        closeModal();
+    }
+});
+
+// Domates sosu detayları için olay dinleyicisi
+document.addEventListener('DOMContentLoaded', () => {
+    const tomatoSauceBtn = document.querySelector('#sauce-container .view-details-btn');
+    if (tomatoSauceBtn) {
+        tomatoSauceBtn.addEventListener('click', () => {
+            showTomatoSauceDetails();
+        });
+    }
+    
+    // Reçel ürünlerini oluştur
+    createProductCards();
+});
+
+// Domates sosu detaylarını göster
+function showTomatoSauceDetails() {
+    modalDetails.innerHTML = `
+        <div class="modal-product-details">
+            <div class="modal-product-image">
+                <img src="images/domatessalcasi.png" alt="Domates Sosu">
+            </div>
+            <div class="modal-product-info">
+                <h2>Domates Sosu</h2>
+                <div class="product-details-price">₺400.00</div>
+                <p>Domates sosumuz, taze domateslerden yapılır ve geleneksel bir tarif kullanılarak hazırlanır. Makarna, pizza ve diğer İtalyan yemekleri için mükemmel bir seçimdir.</p>
+                <h3>İçindekiler</h3>
+                <p>Domates, zeytinyağı, sarımsak, soğan, tuz, karabiber, kekik, fesleğen.</p>
+                <h3>Boyut</h3>
+                <p>350g</p>
+                <h3>Besin Değerleri</h3>
+                <p>Enerji: 100g başına 80 kcal, Karbonhidrat: 10g, Protein: 2g, Yağ: 3g</p>
+                <h3>Sipariş İçin Bize Ulaşın</h3>
+                <p><i class="fas fa-phone"></i> Telefon: +90 555 123 4567</p>
+                <p><i class="fas fa-envelope"></i> E-posta: info@bidene.com</p>
+                <a href="#contact" class="btn contact-button">Bize Ulaşın</a>
+            </div>
+        </div>
+    `;
+    
+    modal.style.display = 'block';
+}
